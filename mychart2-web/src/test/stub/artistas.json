@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"nome": "Rihanna",
+		"totalCancoes" : 12
+	},
+	{
+		"id": 2,
+		"nome": "Black Eyed Peas",
+		"totalCancoes" : 38
+	},
+	{
+		"id": 3,
+		"nome": "Fergie",
+		"totalCancoes" : 25
+	}
+]

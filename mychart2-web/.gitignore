@@ -1,0 +1,7 @@
+/target/
+.classpath
+.project
+/.settings/
+/node_modules/
+/src/main/webapp/app/assets/bower_components/
+/src/main/typescript/typings/

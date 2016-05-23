@@ -1,0 +1,34 @@
+{
+  "name": "mychart2",
+  "description": "Permite o gerenciamento de uma parada musical.",
+  "main": "index.html",
+  "authors": [
+    "Thiago Miranda <th.colbert@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "chart",
+    "music"
+  ],
+  "homepage": "https://github.com/Ryudo302/mychart2#readme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/webapp/app/assets/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.1",
+    "pluralize": "^2.0.0",
+    "angular": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-sanitize": "^1.5.5",
+    "angular-material": "^1.0.9",
+    "angular-material-data-table": "^0.10.9"
+  }
+}

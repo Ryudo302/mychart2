@@ -1,0 +1,66 @@
+<section id="artista">
+	<form name="filtro.form" layout="column" layout-align="none" layout-padding flex>
+		<md-card>
+			<!-- Toolbar padrão  -->
+			<md-toolbar class="md-table-toolbar md-default" ng-hide="artistasSelecionados.length || filtro.visivel" aria-hidden="true">
+			  <div class="md-toolbar-tools">
+			    <h3>Artistas</h3>
+			    <span flex></span>
+			    <md-button ng-click="filtro.visivel = true" class="md-primary md-icon-button md-ink-ripple">
+			    	<md-icon>filter_list</md-icon>
+			    </md-button>
+			    <md-button ng-click="adicionarArtista($event)" class="md-icon-button md-ink-ripple">
+			    	<md-icon>add</md-icon>
+			    </md-button>
+			  </div>
+			</md-toolbar>
+			
+			<!-- Toolbar de pesquisa -->
+			<md-toolbar class="md-table-toolbar md-default" ng-show="filtro.visivel && !artistasSelecionados.length" aria-hidden="false">
+				<div class="md-toolbar-tools">
+					<md-icon class="material-icons">search</md-icon>
+					<form name="filtro.form">
+						<md-input-container flex md-no-float class="md-block">
+							<input ng-model="query.filtro" placeholder="procurar">
+						</md-input-container>
+					</form>
+					<md-button ng-click="removerFiltro()" class="md-primary md-icon-button" aria-label="Fechar">
+			    		<md-icon>close</md-icon>
+		    		</md-button>
+					<div class="md-ripple-container"></div></button>
+				</div>
+			</md-toolbar>
+			
+			<!-- Toolbar de seleção -->
+			<md-toolbar class="md-table-toolbar alternate" ng-show="artistasSelecionados.length" aria-hidden="false">
+				<div class="md-toolbar-tools" layout-align="space-between">
+					<div>{{artistasSelecionados.length}} selecionado(s)</div>
+					<span flex></span>
+					<md-button ng-click="editarArtista($event)" ng-show="artistasSelecionados.length == 1" class="md-icon-button" aria-label="Editar">
+			    		<md-icon>edit</md-icon>
+		    		</md-button>
+					<md-button ng-click="removerArtista($event)" class="md-icon-button" aria-label="Remover">
+			    		<md-icon>delete</md-icon>
+		    		</md-button>
+				</div>
+			</md-toolbar>
+
+			<md-table-container>
+			  <table md-table md-row-select multiple ng-model="artistasSelecionados" md-progress="artistasPromise">
+			    <thead md-head md-order="query.ordem">
+			      <tr md-row>
+			        <th md-column md-order-by="nome">Nome</th>
+			        <th md-column md-numeric md-order-by="totalCancoes">Total de Canções</th>
+			      </tr>
+			    </thead>
+			    <tbody md-body>
+			      <tr md-row md-select="artista" md-select-id="nome" md-auto-select ng-repeat="artista in artistas | orderBy: query.ordem">
+			        <td md-cell>{{artista.nome}}</td>
+			        <td md-cell>{{artista.totalCancoes}}</td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</md-table-container>
+		</md-card>
+	</form>
+</section>

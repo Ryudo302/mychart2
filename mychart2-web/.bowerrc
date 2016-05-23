@@ -1,0 +1,8 @@
+{
+  "directory": "src/main/webapp/app/assets/bower_components/",
+  "registry": {
+    "search": [
+      "https://bower.herokuapp.com"
+    ]
+  }
+}

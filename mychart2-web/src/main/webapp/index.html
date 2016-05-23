@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="MyChart">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="app/assets/bower_components/animate.css/animate.min.css">
+<link rel="stylesheet" href="app/assets/bower_components/angular-material/angular-material.min.css">
+<link rel="stylesheet" href="app/assets/bower_components/angular-material-data-table/dist/md-data-table.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="app/assets/css/app.css" type="text/css">
+
+<title ng-bind="app.nome"></title>
+
+<script type="text/javascript" src="app/assets/bower_components/angular/angular.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-animate/angular-animate.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-aria/angular-aria.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-messages/angular-messages.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-route/angular-route.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-sanitize/angular-sanitize.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-resource/angular-resource.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-material/angular-material.min.js" defer></script>
+<script type="text/javascript" src="app/assets/bower_components/angular-material-data-table/dist/md-data-table.min.js" defer></script>
+
+<script type="text/javascript" src="app/app.module.js" defer></script>
+<script type="text/javascript" src="app/appController.js" defer></script>
+
+<script type="text/javascript" src="app/shared/directives.module.js" defer></script>
+
+<script type="text/javascript" src="app/components/parada/parada.module.js" defer></script>
+<script type="text/javascript" src="app/components/parada/paradaController.js" defer></script>
+
+<script type="text/javascript" src="app/components/artista/artista.module.js" defer></script>
+<script type="text/javascript" src="app/components/artista/artista.resource.js" defer></script>
+<script type="text/javascript" src="app/components/artista/artistaController.js" defer></script>
+</head>
+<body ng-cloak>
+	<div ng-controller="AppController" layout="column">
+
+		<header id="cabecalho" layout-align=" start">
+			<md-content>
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" ng-click="toggleMenu()" aria-label="Settings">
+							<md-icon>menu</md-icon>
+						</md-button>
+						<h1>
+							<span>{{titulo}}</span>
+						</h1>
+						<span flex></span>
+					</div>
+				</md-toolbar>
+			</md-content>
+			
+			<nav id="menu" layout="row">
+				<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="menu">
+					<md-toolbar class="md-theme-light md-toolbar-tools" layout="row">
+						<md-button class="md-icon-button" ng-click="toggleMenu()" aria-label="Settings">
+							<md-icon>menu</md-icon>
+						</md-button>
+						<h2>{{app.nome}}</h2>
+					</md-toolbar>
+					<md-content layout-padding>
+						<md-menu-item flex layout="row">
+							<md-button ng-click="visualizarParada()" class="md-primary">Parada</md-button>
+						</md-menu-item>
+						<md-divider></md-divider>
+						<md-menu-item flex layout="row">
+							<md-button ng-click="visualizarArtista()" class="md-primary">Artista</md-button>
+						</md-menu-item>
+						<md-menu-item flex layout="row">
+							<md-button ng-click="visualizarCancao()" class="md-primary">Canção</md-button>
+						</md-menu-item>
+					</md-content>
+				</md-sidenav>
+			</nav>
+		</header>
+
+		<section id="corpo" flex>
+			<ng-view></ng-view>
+		</section>
+
+		<footer id="rodape" layout-align="start end">
+			<p>{{app.nome}} v.{{app.versao}}</p>
+		</footer>
+
+	</div>
+</body>
+</html>

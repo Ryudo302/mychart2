@@ -1,0 +1,38 @@
+{
+  "name": "mychart2",
+  "version": "1.0.0",
+  "description": "Permite o gerenciamento de uma parada musical.",
+  "main": "index.html",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ryudo302/mychart2.git"
+  },
+  "keywords": [
+    "chart",
+    "music"
+  ],
+  "author": "Thiago Miranda <th.colbert@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryudo302/mychart2/issues"
+  },
+  "homepage": "https://github.com/Ryudo302/mychart2#readme",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.1",
+    "connect-livereload": "^0.5.4",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-type": "^0.3.0",
+    "keypress": "^0.2.1",
+    "tiny-lr": "^0.2.1"
+  }
+}
