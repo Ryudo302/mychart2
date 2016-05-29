@@ -3,10 +3,9 @@ package br.com.colbert.mychart.jetty;
 import java.io.File;
 import java.util.Arrays;
 
-import javax.naming.Context;
-
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.AllowSymLinkAliasChecker;
+import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.webapp.*;
 

@@ -3,8 +3,9 @@ package br.com.colbert.mychart.domain.artista;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
 
 import org.slf4j.Logger;
 
@@ -14,14 +15,14 @@ import org.slf4j.Logger;
  * @author ThiagoColbert
  * @since 29 de mai de 2016
  */
+@ApplicationScoped
 public class ArtistaRepository implements Serializable {
 
 	private static final long serialVersionUID = 5501516895981814573L;
 
 	@Inject
 	private transient Logger logger;
-
-	@PersistenceContext
+	@Inject
 	private transient EntityManager entityManager;
 
 	/**
@@ -32,9 +33,5 @@ public class ArtistaRepository implements Serializable {
 	public List<Artista> getTodos() {
 		logger.debug("Recuperando todos os artistas");
 		return entityManager.createNamedQuery(Artista.QUERY_FIND_ALL, Artista.class).getResultList();
-	}
-	
-	public void setEntityManager(EntityManager entityManager) {
-		this.entityManager = entityManager;
 	}
 }

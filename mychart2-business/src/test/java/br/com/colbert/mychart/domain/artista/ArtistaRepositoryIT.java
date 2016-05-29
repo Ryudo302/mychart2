@@ -6,9 +6,12 @@ import static org.junit.Assert.assertThat;
 
 import java.util.List;
 
+import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
 
-import org.junit.*;
+import org.jglue.cdiunit.ProducesAlternative;
+import org.junit.Test;
 
 import br.com.colbert.mychart.test.AbstractDbUnitTestCase;
 
@@ -23,9 +26,10 @@ public class ArtistaRepositoryIT extends AbstractDbUnitTestCase {
 	@Inject
 	private ArtistaRepository artistaRepository;
 
-	@Before
-	public void setUp() {
-		artistaRepository.setEntityManager(entityManager);
+	@Produces
+	@ProducesAlternative
+	public EntityManager getEntityManager() {
+		return entityManager;
 	}
 
 	@Override
