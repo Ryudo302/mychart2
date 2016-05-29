@@ -1,0 +1,6 @@
+<!DOCTYPE dataset SYSTEM "mychart.dtd">
+<dataset>
+	<ARTISTA COD_ARTISTA="1" NOM_ARTISTA="Rihanna" />
+	<ARTISTA COD_ARTISTA="2" NOM_ARTISTA="Black Eyed Peas" />
+	<ARTISTA COD_ARTISTA="3" NOM_ARTISTA="Shakira" />
+</dataset>
