@@ -3,5 +3,6 @@
 
 	<interceptors>
 		<class>br.com.colbert.mychart.infrastructure.transaction.TransactionalInterceptor</class>
+		<class>br.com.colbert.mychart.infrastructure.conversation.ConversationalInterceptor</class>
 	</interceptors>
 </beans>

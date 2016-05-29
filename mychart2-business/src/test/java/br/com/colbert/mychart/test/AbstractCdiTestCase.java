@@ -6,6 +6,7 @@ import org.junit.Rule;
 import org.junit.rules.TestRule;
 import org.junit.runner.RunWith;
 
+import br.com.colbert.mychart.infrastructure.conversation.ConversationalInterceptor;
 import br.com.colbert.mychart.infrastructure.jpa.EntityManagerFactoryProducer;
 import br.com.colbert.mychart.infrastructure.transaction.TransactionalInterceptor;
 
@@ -16,8 +17,8 @@ import br.com.colbert.mychart.infrastructure.transaction.TransactionalIntercepto
  * @since 29 de mai de 2016
  */
 @RunWith(CdiRunner.class)
-@AdditionalPackages({ LoggerProducer.class, TransactionalInterceptor.class })
-@AdditionalClasses({ EntityManagerFactoryProducer.class, EntityManagerTestsProducer.class })
+@AdditionalPackages({ AbstractCdiTestCase.class, LoggerProducer.class, TransactionalInterceptor.class, ConversationalInterceptor.class })
+@AdditionalClasses({ EntityManagerFactoryProducer.class })
 public abstract class AbstractCdiTestCase {
 
 	@Rule

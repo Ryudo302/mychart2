@@ -9,6 +9,8 @@ import java.lang.annotation.*;
 import javax.enterprise.util.Nonbinding;
 import javax.interceptor.InterceptorBinding;
 
+import br.com.colbert.mychart.infrastructure.conversation.Conversational;
+
 /**
  * Qualificador que indica que um método ou tipo deve executar dentro de uma transação.
  * 
@@ -19,6 +21,7 @@ import javax.interceptor.InterceptorBinding;
 @Retention(RUNTIME)
 @Documented
 @InterceptorBinding
+@Conversational
 public @interface Transactional {
 
 	/**
@@ -33,11 +36,6 @@ public @interface Transactional {
 		 * Cria uma nova transação caso não já exista uma. Caso contrário, reaproveita a transação existente.
 		 */
 		REQUIRED,
-
-		/**
-		 * Cria uma nova transação independentemente de já existir uma aberta.
-		 */
-		REQUIRES_NEW,
 
 		/**
 		 * Não necessita de uma transação aberta, mas a utiliza caso exista uma.
