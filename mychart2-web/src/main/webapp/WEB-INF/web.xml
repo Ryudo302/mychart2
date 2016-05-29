@@ -27,9 +27,6 @@
 	<listener>
 		<listener-class>org.jboss.weld.environment.servlet.BeanManagerResourceBindingListener</listener-class>
 	</listener>
-	<listener>
-		<listener-class>br.com.colbert.mychart.infrastructure.listener.PersistenceUnitCreator</listener-class>
-	</listener>
 	<resource-env-ref>
 		<description>Object factory for the CDI Bean Manager</description>
 		<resource-env-ref-name>BeanManager</resource-env-ref-name>

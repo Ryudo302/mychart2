@@ -9,6 +9,9 @@ import javax.persistence.EntityManager;
 
 import org.slf4j.Logger;
 
+import br.com.colbert.mychart.infrastructure.transaction.Transactional;
+import br.com.colbert.mychart.infrastructure.transaction.Transactional.TransactionType;
+
 /**
  * Repositório de {@link Artista}.
  * 
@@ -30,6 +33,7 @@ public class ArtistaRepository implements Serializable {
 	 * 
 	 * @return os artistas (vazio caso não exista nenhum)
 	 */
+	@Transactional(TransactionType.SUPPORTED)
 	public List<Artista> getTodos() {
 		logger.debug("Recuperando todos os artistas");
 		return entityManager.createNamedQuery(Artista.QUERY_FIND_ALL, Artista.class).getResultList();

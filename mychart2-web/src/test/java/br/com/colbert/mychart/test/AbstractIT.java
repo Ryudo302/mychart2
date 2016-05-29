@@ -1,8 +1,9 @@
 package br.com.colbert.mychart.test;
 
+import java.util.Arrays;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.jboss.weld.environment.servlet.*;
 import org.junit.*;
 
 /**
@@ -24,8 +25,7 @@ public abstract class AbstractIT {
 		webAppContext.setContextPath("/test");
 		webAppContext.setResourceBase("src/main/webapp");
 		webAppContext.setClassLoader(Thread.currentThread().getContextClassLoader());
-		webAppContext.addEventListener(new Listener());
-		webAppContext.addEventListener(new BeanManagerResourceBindingListener());
+		webAppContext.setConfigurationClasses(Arrays.asList("org.eclipse.jetty.webapp.WebXmlConfiguration"));
 
 		server.setHandler(webAppContext);
 		server.start();
