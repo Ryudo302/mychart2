@@ -17,7 +17,7 @@
 			<groupId>br.com.colbert</groupId>
 			<artifactId>mychart2-business</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>

@@ -26,6 +26,7 @@
 	<modules>
 		<module>mychart2-business</module>
 		<module>mychart2-web</module>
+		<module>mychart2-web-jetty</module>
 	</modules>
 
 	<build>
@@ -49,6 +50,22 @@
 				<groupId>br.com.colbert</groupId>
 				<artifactId>mychart2-business</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.colbert</groupId>
+				<artifactId>mychart2-web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.13</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.13</version>
 			</dependency>
 
 			<dependency>
