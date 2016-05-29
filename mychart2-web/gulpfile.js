@@ -46,8 +46,8 @@ gulp.task('start-server', function() {
 
 var ts = require('gulp-type');
 var tsProject = ts.createProject({
-	declarationFiles: true,
-	noExternalResolve: true
+	declarationFiles : true,
+	noExternalResolve : true
 });
 
 gulp.task('compile-ts', function() {
@@ -61,7 +61,7 @@ gulp.task('watch-ts', [ 'compile-ts' ], function() {
 });
 
 gulp.task('watch-files', [ 'watch-ts', 'start-server' ], function() {
-	gulp.watch([ './*.js', server.basePath + '/app/*.js', server.basePath + '/app/**/*.html', server.basePath + '/app/**/*.js',
+	gulp.watch([ './*.js', './*.html', server.basePath + '/app/*.js', server.basePath + '/app/**/*.html', server.basePath + '/app/**/*.js',
 			server.basePath + '/app/**/*.css', 'src/test/stub/**/*.json' ], function(event) {
 		server.notify(event);
 	});
@@ -83,9 +83,9 @@ gulp.task('listen-stdin', [ 'start-server' ], function() {
 });
 
 gulp.task('stub-api', function() {
-	return gulp.src('src/test/stub/**/*.json')/*.pipe(require("gulp-rename")(function(path) {
-		path.extname = ""
-	}))*/.pipe(gulp.dest(server.basePath + '/rest/'));
+	return gulp.src('src/test/stub/**/*.json')/*
+												 * .pipe(require("gulp-rename")(function(path) { path.extname = "" }))
+												 */.pipe(gulp.dest(server.basePath + '/rest/'));
 });
 
 gulp.task('shutdown', function() {

@@ -10,19 +10,19 @@ angular.module('MyChart.artista')
 		id : '@id'
 	}, {
 		getAll : {
-			url : 'rest/artistas',
+			url : 'rest/artista',
 			method : 'GET',
 			isArray : true
 		},
 		save : {
-			url : 'rest/artistas',
+			url : 'rest/artista',
 			method : 'POST'
 		},
 		update : {
 			method : 'PUT'
 		},
 		deleteAll : {
-			url : '/rest/artistas',
+			url : '/rest/artista',
 			method : 'DELETE',
 			isArray : true
 		}

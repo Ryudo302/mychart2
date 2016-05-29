@@ -108,7 +108,7 @@ angular.module('MyChart.artista')
 
 						abrirEdicaoArtista(evento).then(function() {
 							$log.info('Salvando novo artista:', $scope.artista);
-							$scope.artista.$save().then(crudSuccessCallback, function(reason) {
+							$scope.artista.$save(null, crudSuccessCallback, function(reason) {
 								// TODO Erro
 							});
 						}, function() {
@@ -138,7 +138,9 @@ angular.module('MyChart.artista')
 									id : $scope.artistasSelecionados.map(function(artista) {
 										return artista.id;
 									})
-								}).then(crudSuccessCallback);
+								}, crudSuccessCallback, function(reason) {
+									// TODO Erro
+								});
 							} else {
 								$scope.artistasSelecionados[0].$delete().then(crudSuccessCallback);
 							}
