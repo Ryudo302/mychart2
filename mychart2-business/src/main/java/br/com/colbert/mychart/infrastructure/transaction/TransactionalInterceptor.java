@@ -38,7 +38,7 @@ public class TransactionalInterceptor implements Serializable {
 		Transactional annotation = invocation.getMethod().getAnnotation(Transactional.class);
 		if (annotation != null) {
 			TransactionType transactionType = annotation.value();
-			logger.debug("Tipo: {}", transactionType);
+			logger.debug("Modo de transação: {}", transactionType);
 
 			if (transactionType == TransactionType.REQUIRED) {
 				boolean owner = !entityManager.getTransaction().isActive();

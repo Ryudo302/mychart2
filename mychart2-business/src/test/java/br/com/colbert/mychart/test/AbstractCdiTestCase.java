@@ -17,8 +17,8 @@ import br.com.colbert.mychart.infrastructure.transaction.TransactionalIntercepto
  * @since 29 de mai de 2016
  */
 @RunWith(CdiRunner.class)
-@AdditionalPackages({ AbstractCdiTestCase.class, LoggerProducer.class, TransactionalInterceptor.class, ConversationalInterceptor.class })
-@AdditionalClasses({ EntityManagerFactoryProducer.class })
+@AdditionalPackages({ AbstractCdiTestCase.class, LoggerProducer.class, EntityManagerFactoryProducer.class, ConversationalInterceptor.class,
+		TransactionalInterceptor.class })
 public abstract class AbstractCdiTestCase {
 
 	@Rule

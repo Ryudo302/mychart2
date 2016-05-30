@@ -55,6 +55,8 @@ public class ConversationalInterceptor implements Serializable {
 			storage = new MutableBoundRequest(request, session);
 			boundContext.associate(storage);
 			boundContext.activate();
+		} else {
+			logger.debug("Já existe conversação ativa");
 		}
 
 		try {
