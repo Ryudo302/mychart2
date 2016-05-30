@@ -18,7 +18,7 @@ public abstract class AbstractIT {
 
 	@BeforeClass
 	public static void startServer() throws Exception {
-		server = new Server(8080);
+		server = new Server(0);
 		server.setStopAtShutdown(true);
 
 		WebAppContext webAppContext = new WebAppContext();
