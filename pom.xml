@@ -83,11 +83,13 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>1.7.13</version>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>1.7.13</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
@@ -154,6 +156,11 @@
 			<dependency>
 				<groupId>org.glassfish.jersey.ext.cdi</groupId>
 				<artifactId>jersey-cdi1x</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.ext.cdi</groupId>
+				<artifactId>jersey-weld2-se</artifactId>
 				<version>${jersey.version}</version>
 			</dependency>
 			<dependency>

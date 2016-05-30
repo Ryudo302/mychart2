@@ -16,6 +16,13 @@
 		</dependency>
 
 		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>7.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
 			<scope>compile</scope>

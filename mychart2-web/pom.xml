@@ -49,7 +49,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.ext.cdi</groupId>
-			<artifactId>jersey-cdi1x</artifactId>
+			<artifactId>jersey-weld2-se</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
