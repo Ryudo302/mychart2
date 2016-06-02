@@ -25,6 +25,11 @@ angular.module('MyChart.artista')
 			url : '/rest/artista',
 			method : 'DELETE',
 			isArray : true
+		},
+		getCancoes : {
+			url : 'rest/artista/:id/cancoes',
+			method : 'GET',
+			isArray : true
 		}
 	});
 } ]);

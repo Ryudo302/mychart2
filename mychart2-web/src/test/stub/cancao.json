@@ -1,0 +1,33 @@
+[
+	{
+		"titulo": "Teste A",
+		"artistas": [
+			{
+				"id": 1,
+				"nome": "Rihanna"
+			}
+		]
+	},
+	{
+		"titulo": "Teste C",
+		"artistas": [
+			{
+				"id": 1,
+				"nome": "Rihanna"
+			},
+			{
+				"id": 2,
+				"nome": "Black Eyed Peas"
+			}
+		]
+	},
+	{
+		"titulo": "Teste B",
+		"artistas": [
+			{
+				"id": 3,
+				"nome": "Fergie"
+			}
+		]
+	}
+]

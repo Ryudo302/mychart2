@@ -4,7 +4,7 @@ var MyChart;
 (function (MyChart) {
     'use strict';
 
-    angular.module('MyChart', ['ngRoute', 'ngResource', 'ngSanitize', 'ngMaterial', 'MyChart.directives', 'MyChart.parada', 'MyChart.artista']).config([
+    angular.module('MyChart', ['ngRoute', 'ngResource', 'ngSanitize', 'ngMaterial', 'MyChart.directives', 'MyChart.parada', 'MyChart.artista', 'MyChart.cancao']).config([
         '$routeProvider', function ($routeProvider) {
             'use strict';
 

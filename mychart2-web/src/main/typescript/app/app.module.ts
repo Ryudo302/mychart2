@@ -4,11 +4,11 @@
 module MyChart {
     'use strict';
 
-    angular.module('MyChart', ['ngRoute', 'ngResource', 'ngSanitize', 'ngMaterial', 'MyChart.directives', 'MyChart.parada', 'MyChart.artista'])
+    angular.module('MyChart', ['ngRoute', 'ngResource', 'ngSanitize', 'ngMaterial', 'MyChart.directives', 'MyChart.parada', 'MyChart.artista', 'MyChart.cancao'])
 
         .config(['$routeProvider', function($routeProvider: ng.route.IRouteProvider) {
             'use strict';
-            
+
             $routeProvider.when('/parada', {
                 templateUrl: 'app/components/parada/parada.html',
                 controller: 'ParadaController'

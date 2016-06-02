@@ -61,8 +61,8 @@ gulp.task('watch-ts', [ 'compile-ts' ], function() {
 });
 
 gulp.task('watch-files', [ 'watch-ts', 'start-server' ], function() {
-	gulp.watch([ './*.js', './*.html', server.basePath + '/app/*.js', server.basePath + '/app/**/*.html', server.basePath + '/app/**/*.js',
-			server.basePath + '/app/**/*.css', 'src/test/stub/**/*.json' ], function(event) {
+	gulp.watch([ './*.js', server.basePath + '/*.html', server.basePath + '/app/*.js', server.basePath + '/app/**/*.html',
+			server.basePath + '/app/**/*.js', server.basePath + '/app/**/*.css', 'src/test/stub/**/*.json' ], function(event) {
 		server.notify(event);
 	});
 });
